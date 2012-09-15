@@ -19,6 +19,11 @@
 		CB6E80FF16038EF7009F3F7F /* KBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6E80FE16038EF7009F3F7F /* KBViewController.m */; };
 		CB6E810216038EF8009F3F7F /* KBViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6E810016038EF8009F3F7F /* KBViewController_iPhone.xib */; };
 		CB6E810516038EF8009F3F7F /* KBViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6E810316038EF8009F3F7F /* KBViewController_iPad.xib */; };
+		CB6E810E16039011009F3F7F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6E810D16039011009F3F7F /* libsqlite3.dylib */; };
+		CB6E8114160391FA009F3F7F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6E8113160391FA009F3F7F /* CoreLocation.framework */; };
+		CB6E811616039663009F3F7F /* zip_codes.csv in Resources */ = {isa = PBXBuildFile; fileRef = CB6E811516039663009F3F7F /* zip_codes.csv */; };
+		CB6E811F160467BF009F3F7F /* KBZipCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6E811E160467BF009F3F7F /* KBZipCodeManager.m */; };
+		CB6E81251604868A009F3F7F /* zip_codes.db in Resources */ = {isa = PBXBuildFile; fileRef = CB6E81241604868A009F3F7F /* zip_codes.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,13 @@
 		CB6E80FE16038EF7009F3F7F /* KBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBViewController.m; sourceTree = "<group>"; };
 		CB6E810116038EF8009F3F7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KBViewController_iPhone.xib; sourceTree = "<group>"; };
 		CB6E810416038EF8009F3F7F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KBViewController_iPad.xib; sourceTree = "<group>"; };
+		CB6E810B16039006009F3F7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CB6E810D16039011009F3F7F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CB6E8113160391FA009F3F7F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CB6E811516039663009F3F7F /* zip_codes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zip_codes.csv; sourceTree = "<group>"; };
+		CB6E811D160467BF009F3F7F /* KBZipCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBZipCodeManager.h; sourceTree = "<group>"; };
+		CB6E811E160467BF009F3F7F /* KBZipCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBZipCodeManager.m; sourceTree = "<group>"; };
+		CB6E81241604868A009F3F7F /* zip_codes.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zip_codes.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6E8114160391FA009F3F7F /* CoreLocation.framework in Frameworks */,
+				CB6E810E16039011009F3F7F /* libsqlite3.dylib in Frameworks */,
 				CB6E80E616038EF7009F3F7F /* UIKit.framework in Frameworks */,
 				CB6E80E816038EF7009F3F7F /* Foundation.framework in Frameworks */,
 				CB6E80EA16038EF7009F3F7F /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +89,9 @@
 		CB6E80E416038EF7009F3F7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB6E810D16039011009F3F7F /* libsqlite3.dylib */,
+				CB6E8113160391FA009F3F7F /* CoreLocation.framework */,
+				CB6E810B16039006009F3F7F /* MapKit.framework */,
 				CB6E80E516038EF7009F3F7F /* UIKit.framework */,
 				CB6E80E716038EF7009F3F7F /* Foundation.framework */,
 				CB6E80E916038EF7009F3F7F /* CoreGraphics.framework */,
@@ -92,6 +109,8 @@
 				CB6E810016038EF8009F3F7F /* KBViewController_iPhone.xib */,
 				CB6E810316038EF8009F3F7F /* KBViewController_iPad.xib */,
 				CB6E80EC16038EF7009F3F7F /* Supporting Files */,
+				CB6E811D160467BF009F3F7F /* KBZipCodeManager.h */,
+				CB6E811E160467BF009F3F7F /* KBZipCodeManager.m */,
 			);
 			path = ZipCodeDistance;
 			sourceTree = "<group>";
@@ -99,6 +118,7 @@
 		CB6E80EC16038EF7009F3F7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CB6E81241604868A009F3F7F /* zip_codes.db */,
 				CB6E80ED16038EF7009F3F7F /* ZipCodeDistance-Info.plist */,
 				CB6E80EE16038EF7009F3F7F /* InfoPlist.strings */,
 				CB6E80F116038EF7009F3F7F /* main.m */,
@@ -106,6 +126,7 @@
 				CB6E80F716038EF7009F3F7F /* Default.png */,
 				CB6E80F916038EF7009F3F7F /* Default@2x.png */,
 				CB6E80FB16038EF7009F3F7F /* Default-568h@2x.png */,
+				CB6E811516039663009F3F7F /* zip_codes.csv */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,6 +189,8 @@
 				CB6E80FC16038EF7009F3F7F /* Default-568h@2x.png in Resources */,
 				CB6E810216038EF8009F3F7F /* KBViewController_iPhone.xib in Resources */,
 				CB6E810516038EF8009F3F7F /* KBViewController_iPad.xib in Resources */,
+				CB6E811616039663009F3F7F /* zip_codes.csv in Resources */,
+				CB6E81251604868A009F3F7F /* zip_codes.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +204,7 @@
 				CB6E80F216038EF7009F3F7F /* main.m in Sources */,
 				CB6E80F616038EF7009F3F7F /* KBAppDelegate.m in Sources */,
 				CB6E80FF16038EF7009F3F7F /* KBViewController.m in Sources */,
+				CB6E811F160467BF009F3F7F /* KBZipCodeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +295,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipCodeDistance/ZipCodeDistance-Prefix.pch";
 				INFOPLIST_FILE = "ZipCodeDistance/ZipCodeDistance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -282,7 +308,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZipCodeDistance/ZipCodeDistance-Prefix.pch";
 				INFOPLIST_FILE = "ZipCodeDistance/ZipCodeDistance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

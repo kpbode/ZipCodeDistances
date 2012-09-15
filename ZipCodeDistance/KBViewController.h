@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KBViewController : UIViewController
+@interface KBViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, weak, readwrite) IBOutlet UILabel *currentLocationLabel;
+@property (nonatomic, weak, readwrite) IBOutlet UITableView *zipCodeTableView;
 
 @end
