@@ -1,0 +1,1 @@
+This sample project provides a simple distance calculation based on German ZipCodes from http://opengeodb.org. The Class KBZipCodeManager provides methods to retrieve a label (location name) for a given ZipCode and calculates the distance between two given ZipCodes in meters. The code uses CoreLocation.  
